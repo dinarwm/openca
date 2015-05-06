@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Certifikat
-	</title>
-	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <title>
+    Sertifikat
+  </title>
+  <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <h1 class="text-center">CERTIFICATE</h1>
 <body style="margin-top: 120px">
-<div class="text-center">
-<a href="certificate.crt" download>
-  <img src="certificate.jpg" alt="certificate" width="204" height="262" class="img-thumbnail">
-  <br>
-  Click to Download
-</a>
-<br>
-<br>
-<a href="index.php"> Back </a>
-</div>
-
-</body>
-</html>
+  <div class="text-center">
+    <!-- <a href="certificate.crt" download> -->
+    <!-- <img src="certificate.jpg" alt="certificate" width="204" height="262" class="img-thumbnail"> -->
+    <!-- Click to Download -->
+    <!-- </a> -->
+    <a href="index.php" class="btn btn-danger">Back</a>
+    <a href="certificate.crt" class="btn btn-success" download>Download</a>
+  </div>
+  <div class="hidden">
 
 <?php
 // Fill in data for the distinguished name to be used in the cert
@@ -32,13 +28,13 @@
 // the commonName will be the name of the individual who will use the
 // certificate.
 $dn = array(
-    "countryName" => $_POST["country"],
-    "stateOrProvinceName" => $_POST["province"],
-    "localityName" => $_POST["locality"],
-    "organizationName" => $_POST["organization"],
-    "organizationalUnitName" => $_POST["organizationUnit"],
-    "commonName" => $_POST["commonName"],
-    "emailAddress" => $_POST["email"]
+  'countryName' => $_POST['country'],
+  'stateOrProvinceName' => $_POST['province'],
+  'localityName' => $_POST['locality'],
+  'organizationName' => $_POST['organization'],
+  'organizationalUnitName' => $_POST['organizationUnit'],
+  'commonName' => $_POST['commonName'],
+  'emailAddress' => $_POST['email']
 );
 
 // Generate a new private (and public) key pair
@@ -61,11 +57,11 @@ $sscert = openssl_csr_sign($csr, null, $privkey, 365);
 // you with the "real" certificate.
 openssl_csr_export($csr, $csrout);// and var_dump($csrout);
 openssl_x509_export($sscert, $certout);// and var_dump($certout);
-openssl_pkey_export($privkey, $pkeyout, "mypassword");// and var_dump($pkeyout);
+openssl_pkey_export($privkey, $pkeyout, 'mypassword');// and var_dump($pkeyout);
 
 // Show any errors that occurred here
 while (($e = openssl_error_string()) !== false) {
-    //echo $e . "\n";
+    //echo $e . '\n";
 }
 
 openssl_x509_export_to_file($sscert,  'C:\xampp\htdocs\CA\certificate.crt',  FALSE );
