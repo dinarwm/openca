@@ -1,3 +1,5 @@
+Jangan lupa install openssl dahulu, pilih pilihan yang bin jangan yang windows ya :D
+
 # openca
 Tugas Implementasi Infrastruktur Kunci Publik
 
