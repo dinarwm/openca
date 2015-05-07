@@ -71,7 +71,7 @@ openssl_pkey_export($privkey, $pkeyout, 'mypassword');// and var_dump($pkeyout);
 while (($e = openssl_error_string()) !== false) {
     //echo $e . '\n";
 }
-$file = $email;
+$file = $commonName . "_" . $email;
 $path = "C:\\xampp\\htdocs\\openca\\cert\\". $file .".crt";
 
 openssl_x509_export_to_file($sscert, $path,  FALSE );
