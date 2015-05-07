@@ -1,0 +1,81 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 0 (0x0)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=ID, ST=Jawa Timir, L=Surabaya, O=ITS, OU=Teknik Informatika, CN=icang/emailAddress=icang@gmail.com
+        Validity
+            Not Before: May  7 02:48:10 2015 GMT
+            Not After : May  6 02:48:10 2016 GMT
+        Subject: C=ID, ST=Jawa Timir, L=Surabaya, O=ITS, OU=Teknik Informatika, CN=icang/emailAddress=icang@gmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a3:f3:68:09:3b:bf:43:1b:2e:e6:4d:1e:46:e0:
+                    6a:e3:21:d7:4f:b3:d5:9f:ea:03:3e:3a:eb:3a:af:
+                    a4:e3:f3:90:4a:58:24:a4:73:0d:19:a0:f7:13:1f:
+                    2e:78:03:2b:99:ff:23:91:af:6f:c5:0e:95:6b:75:
+                    cc:1f:aa:9e:9a:a7:d2:46:5b:3a:50:b1:85:47:fb:
+                    92:60:66:c4:2d:6f:2e:1b:22:da:b7:c1:10:9e:75:
+                    89:c5:07:09:3e:b8:d0:bb:9c:ea:4f:5f:f9:d4:00:
+                    ea:77:31:ad:b1:7a:c5:72:2c:21:48:70:5f:97:52:
+                    dd:d3:e5:c5:31:43:a9:40:1f:46:56:6f:d3:97:89:
+                    2f:1b:21:85:b5:dd:ba:93:99:ba:37:4e:77:21:68:
+                    63:16:a4:41:b4:d9:ee:b7:df:2b:ff:7f:95:9f:e8:
+                    d4:f6:2b:b8:f2:38:b3:19:7b:c6:86:1f:43:51:53:
+                    96:3f:d8:ba:ed:2b:d3:f0:61:b8:7c:31:14:a5:4e:
+                    b8:1f:d8:00:72:ad:be:16:b8:46:69:29:02:ce:05:
+                    1a:c2:1f:0a:dd:2f:b5:b7:79:b1:7b:a5:61:67:4e:
+                    c1:55:d3:83:0f:73:9f:43:2e:c7:ed:6c:61:db:17:
+                    64:80:56:0d:16:41:b7:68:bb:a8:56:29:6c:ba:b7:
+                    da:ab
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                CB:3A:42:73:B7:22:DA:32:DC:8F:DC:A6:61:6B:AC:D1:E7:32:54:39
+            X509v3 Authority Key Identifier: 
+                keyid:CB:3A:42:73:B7:22:DA:32:DC:8F:DC:A6:61:6B:AC:D1:E7:32:54:39
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: sha1WithRSAEncryption
+         48:bd:a6:ee:de:7a:f2:d5:8a:f3:be:97:07:bf:89:2e:a6:20:
+         1f:6a:b1:99:ac:c1:2e:4e:e8:58:e1:e8:60:e1:ac:a0:12:5a:
+         a3:9c:bf:23:d5:aa:7b:15:30:50:d7:c0:d8:56:d0:ac:57:a2:
+         bc:6c:82:61:66:fc:f8:96:cb:41:d2:cf:33:87:6a:b1:92:bb:
+         23:ce:15:31:d3:c7:f0:1a:03:72:7a:59:b0:f3:63:18:3d:f6:
+         e5:bc:7f:fc:56:34:b0:4c:48:e3:cd:1e:c1:de:1e:9a:dd:36:
+         22:0d:3e:e9:73:39:f1:1b:9e:a9:25:01:52:36:8d:37:87:0f:
+         77:26:74:ab:79:e7:8d:78:a0:bd:37:1f:7b:e5:59:16:63:6a:
+         d4:ed:12:1b:53:7f:85:3b:de:fe:11:06:8b:13:68:24:93:c1:
+         aa:e2:c4:cc:bc:88:0a:e8:68:23:6d:cd:b2:b2:de:59:72:d0:
+         29:31:b2:90:4a:e6:66:de:a5:25:b9:9f:7f:f2:37:17:47:ef:
+         d5:9b:10:0b:6d:b0:48:d6:3f:71:12:d3:05:55:a3:d6:90:53:
+         1f:6d:78:5b:ec:5d:3f:49:2f:b6:db:bb:2d:b5:7f:dd:24:12:
+         80:e0:60:57:7d:9d:55:67:9d:a9:c0:f6:db:ac:b5:e2:d1:10:
+         78:9c:ae:5c
+-----BEGIN CERTIFICATE-----
+MIID7TCCAtWgAwIBAgIBADANBgkqhkiG9w0BAQUFADCBkDELMAkGA1UEBhMCSUQx
+EzARBgNVBAgMCkphd2EgVGltaXIxETAPBgNVBAcMCFN1cmFiYXlhMQwwCgYDVQQK
+DANJVFMxGzAZBgNVBAsMElRla25payBJbmZvcm1hdGlrYTEOMAwGA1UEAwwFaWNh
+bmcxHjAcBgkqhkiG9w0BCQEWD2ljYW5nQGdtYWlsLmNvbTAeFw0xNTA1MDcwMjQ4
+MTBaFw0xNjA1MDYwMjQ4MTBaMIGQMQswCQYDVQQGEwJJRDETMBEGA1UECAwKSmF3
+YSBUaW1pcjERMA8GA1UEBwwIU3VyYWJheWExDDAKBgNVBAoMA0lUUzEbMBkGA1UE
+CwwSVGVrbmlrIEluZm9ybWF0aWthMQ4wDAYDVQQDDAVpY2FuZzEeMBwGCSqGSIb3
+DQEJARYPaWNhbmdAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEAo/NoCTu/Qxsu5k0eRuBq4yHXT7PVn+oDPjrrOq+k4/OQSlgkpHMNGaD3
+Ex8ueAMrmf8jka9vxQ6Va3XMH6qemqfSRls6ULGFR/uSYGbELW8uGyLat8EQnnWJ
+xQcJPrjQu5zqT1/51ADqdzGtsXrFciwhSHBfl1Ld0+XFMUOpQB9GVm/Tl4kvGyGF
+td26k5m6N053IWhjFqRBtNnut98r/3+Vn+jU9iu48jizGXvGhh9DUVOWP9i67SvT
+8GG4fDEUpU64H9gAcq2+FrhGaSkCzgUawh8K3S+1t3mxe6VhZ07BVdODD3OfQy7H
+7Wxh2xdkgFYNFkG3aLuoVilsurfaqwIDAQABo1AwTjAdBgNVHQ4EFgQUyzpCc7ci
+2jLcj9ymYWus0ecyVDkwHwYDVR0jBBgwFoAUyzpCc7ci2jLcj9ymYWus0ecyVDkw
+DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEASL2m7t568tWK876XB7+J
+LqYgH2qxmazBLk7oWOHoYOGsoBJao5y/I9WqexUwUNfA2FbQrFeivGyCYWb8+JbL
+QdLPM4dqsZK7I84VMdPH8BoDcnpZsPNjGD325bx//FY0sExI480ewd4emt02Ig0+
+6XM58RueqSUBUjaNN4cPdyZ0q3nnjXigvTcfe+VZFmNq1O0SG1N/hTve/hEGixNo
+JJPBquLEzLyICuhoI23NsrLeWXLQKTGykErmZt6lJbmff/I3F0fv1ZsQC22wSNY/
+cRLTBVWj1pBTH214W+xdP0kvttu7LbV/3SQSgOBgV32dVWedqcD226y14tEQeJyu
+XA==
+-----END CERTIFICATE-----

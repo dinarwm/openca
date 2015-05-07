@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>
-    Sertifikat
-  </title>
-  <link href="css/bootstrap.css" rel="stylesheet">
-</head>
-<h1 class="text-center">CERTIFICATE</h1>
-<body style="margin-top: 120px">
-  <div class="text-center">
-    <a href="index.php" class="btn btn-danger">Back</a>
-    <a href="certificate.crt" class="btn btn-success" download>Download</a>
-  </div>
-  <div class="hidden">
+  
 
 <?php
 
@@ -50,3 +39,15 @@ $path = "C:\\xampp\\htdocs\\openca\\cert\\". $file .".crt";
 
 openssl_x509_export_to_file($sscert, $path,  FALSE );
 ?>
+<title>
+    Sertifikat
+  </title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<h1 class="text-center">CERTIFICATE</h1>
+<body style="margin-top: 120px">
+  <div class="text-center">
+    <a href="index.php" class="btn btn-danger">Back</a>
+    <a href="<?php echo $path; ?>" class="btn btn-success" download>Download</a>
+  </div>
+  <div class="hidden">
