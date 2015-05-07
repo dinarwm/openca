@@ -27,14 +27,22 @@
 // that will be using the certificate, but for S/MIME certificates,
 // the commonName will be the name of the individual who will use the
 // certificate.
+$country = $_POST['country'];
+$province = $_POST['province'];
+$locality = $_POST['locality'];
+$organization = $_POST['organization'];
+$organizationUnit = $_POST['organizationUnit'];
+$commonName = $_POST['commonName'];
+$email = $_POST['email'];
+
 $dn = array(
-  'countryName' => $_POST['country'],
-  'stateOrProvinceName' => $_POST['province'],
-  'localityName' => $_POST['locality'],
-  'organizationName' => $_POST['organization'],
-  'organizationalUnitName' => $_POST['organizationUnit'],
-  'commonName' => $_POST['commonName'],
-  'emailAddress' => $_POST['email']
+  'countryName' => $country,
+  'stateOrProvinceName' => $province,
+  'localityName' => $locality,
+  'organizationName' => $organization,
+  'organizationalUnitName' => $organizationUnit,
+  'commonName' => $commonName,
+  'emailAddress' => $email
 );
 
 // Generate a new private (and public) key pair
@@ -63,6 +71,8 @@ openssl_pkey_export($privkey, $pkeyout, 'mypassword');// and var_dump($pkeyout);
 while (($e = openssl_error_string()) !== false) {
     //echo $e . '\n";
 }
+$file = $email;
+$path = "C:\\xampp\\htdocs\\openca\\cert\\". $file .".crt";
 
-openssl_x509_export_to_file($sscert,  'C:\xampp\htdocs\CA\certificate.crt',  FALSE );
+openssl_x509_export_to_file($sscert, $path,  FALSE );
 ?>
