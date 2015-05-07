@@ -34,8 +34,9 @@ openssl_csr_export($csr, $csrout);
 openssl_x509_export($sscert, $certout);
 openssl_pkey_export($privkey, $pkeyout, 'mypassword');
 
-$file = $commonName . "_" . $email;
-$path = "C:\\xampp\\htdocs\\openca\\cert\\". $file .".crt";
+$file = $commonName . "_" . $email . ".crt";
+$path = "C:\\xampp\\htdocs\\openca\\cert\\". $file;
+$server = "cert/";
 
 openssl_x509_export_to_file($sscert, $path,  FALSE );
 ?>
@@ -48,6 +49,6 @@ openssl_x509_export_to_file($sscert, $path,  FALSE );
 <body style="margin-top: 120px">
   <div class="text-center">
     <a href="index.php" class="btn btn-danger">Back</a>
-    <a href="<?php echo $path; ?>" class="btn btn-success" download>Download</a>
+    <a href="<?php echo $server . $file; ?>" class="btn btn-success" download>Download</a>
   </div>
   <div class="hidden">
