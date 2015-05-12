@@ -3,14 +3,27 @@
 class Certificate extends CI_Model
 {
 	//admin
-	public function createCertificate($username, $name, $country,$province,$locality,$organization,$organizationUnit,$email,$certificate,$privkey)
+	public function createCertificate($username, $name, $country,$province,$locality,$organization,$organizationUnit,$email,$certificate,$public,$private)
 	{
 		//select * from user where username = $username and password = $password
-		$sql = "INSERT INTO `certificate` (`ID_certificate`, `Username`, `Name`, `Country`, `Province`, `Locality`, `Organization Name`, `Organizational Unit Name`, `Email`, `Certificate`, `RevokeC`, `KeyC`) 
-		VALUES (NULL,'$username','$name','$country','$province','$locality','$organization','$organizationUnit','$email','$certificate','0','$privkey')";
+		$sql = "INSERT INTO `certificate` (`ID_certificate`, `Username`, `Name`, `Country`, `Province`, `Locality`, `Organization Name`, `Organizational Unit Name`, `Email`, `Certificate`, `RevokeC`, `PublicKey`,`PrivateKey`) 
+		VALUES (NULL,'$username','$name','$country','$province','$locality','$organization','$organizationUnit','$email','$certificate','0','$public','$private')";
 		$this->db->query($sql);
 		return True;
 	}
+
+	function Get_cert($username){
+    	$sql = "SELECT Certificate FROM certificate where Username = '$username'";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) 
+        {
+            return $query->result_array();
+        }
+        else 
+        {
+            return FALSE;
+        }
+    }
 
 	public function register($username, $password)
 	{

@@ -48,6 +48,9 @@
                         <a href="#create">Create</a>
                     </li>
                     <li class="page-scroll">
+                        <a href="#Download">Download</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="<?php echo base_url(); ?>auth/doLogout">Log Out</a>
                     </li>
                 </ul>
