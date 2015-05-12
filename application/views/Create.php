@@ -6,7 +6,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">Username</label>
                             <div class="col-md-6">
-                                <input class="form-control" name="username" type="text" value="<?php echo $_SESSION["username"]; ?>" disabled>
+                                <input class="form-control" name="username" type="text" value="<?php echo $_SESSION["username"]; ?>" readonly>
                             </div>
                         </div>
 
