@@ -6,17 +6,12 @@ class User extends CI_Model
 	public function login($username, $password)
 	{
 		//select * from user where username = $username and password = $password
-		$result = $this->db->get_where('user',
-			array
-			(
-				'username' => $username,
-				'password' => $password
-			)
-		);
+		$sql = "SELECT username FROM user where Username = '$username' and Password = '$password'";
+        $query = $this->db->query($sql);
 		
-		if ($result->num_rows() > 0)
+		if ($query->num_rows() > 0)
 		{
-			return TRUE;
+			return $username;
 		}
 		else
 		{

@@ -19,7 +19,6 @@
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url(); ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body id="page-top" class="index">
@@ -46,9 +45,6 @@
                     </li>
                     <li class="page-scroll">
                         <a href="#create">Create</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#Download">Download</a>
                     </li>
                     <li class="page-scroll">
                         <a href="<?php echo base_url(); ?>auth/doLogout">Log Out</a>

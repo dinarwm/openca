@@ -1,6 +1,6 @@
 <?php
 	
-class Home extends CI_Controller
+class Admin extends CI_Controller
 {
 	function __construct()
 	{
@@ -16,12 +16,21 @@ class Home extends CI_Controller
 		$this->load->model('certificate');
 		$data['userdata'] = $this->session->all_userdata();
 		$username = $data['userdata']['username'];
-		$data['cert']=$this->certificate->Get_cert($username);
+		$data['cert']=$this->certificate->Get_list_cert();
 		$this->load->view('Header');
 		$this->load->view('Front');
 		$this->load->view('Create');
-		if($data['cert']) $this->load->view('Download',$data);
+		$this->load->view('ListCertificate',$data);
+		$this->load->view('CRL',$data);
 		$this->load->view('Footer');
+	}
+
+	function revoke()
+	{
+		$id = $this->input->post('id');
+		$this->load->model('certificate');
+		$this->certificate->revoke($id);
+		redirect('admin');
 	}
 
 	function createCertificate(){

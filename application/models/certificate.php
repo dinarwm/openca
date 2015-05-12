@@ -25,6 +25,25 @@ class Certificate extends CI_Model
         }
     }
 
+    function Get_list_cert(){
+    	$sql = "SELECT * FROM certificate";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) 
+        {
+            return $query->result_array();
+        }
+        else 
+        {
+            return FALSE;
+        }
+    }
+
+    public function revoke($id)
+    {
+    	$sql = "UPDATE Certificate SET RevokeC = '1' WHERE ID_certificate = '$id'";
+    	$query = $this->db->query($sql);
+    }
+
 	public function register($username, $password)
 	{
 		//select * from user where username = $username and password = $password

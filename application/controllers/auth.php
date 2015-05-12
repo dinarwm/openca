@@ -32,6 +32,9 @@ class Auth extends CI_Controller
 		{
 			$data = array('username' => $username, 'login' => TRUE);
 			$this->session->set_userdata($data);
+			if($username == 'admin'){
+				redirect('admin');
+			}
 		}
 		else
 		{

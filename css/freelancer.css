@@ -85,6 +85,14 @@ header {
     background: #18bc9c;
 }
 
+section#List{
+    background-color: #27ae60;
+}
+
+section#CRL{
+    background-color: #e74c3c;
+}
+
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -170,6 +178,10 @@ header .intro-text .skills {
     border: 0;
 }
 
+section#create{
+    background-color: #e67e22;
+}
+
 section {
     padding: 100px 0;
 }
@@ -184,9 +196,6 @@ section.success {
     background: #18bc9c;
 }
 
-section#create{
-    background-color: #e67e22;
-}
 section.success a,
 section.success a:hover,
 section.success a:focus,
