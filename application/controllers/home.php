@@ -5,7 +5,7 @@ class Home extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		if($this->session->userdata('login') != TRUE)
+		if($this->session->userdata('login') != TRUE || $this->session->userdata('username') == "admin")
 		{
 			redirect('auth');
 		}
@@ -17,9 +17,10 @@ class Home extends CI_Controller
 		$data['userdata'] = $this->session->all_userdata();
 		$username = $data['userdata']['username'];
 		$data['cert']=$this->certificate->Get_cert($username);
+		$data['username'] = "user";
 		$this->load->view('Header');
 		$this->load->view('Front');
-		$this->load->view('Create');
+		$this->load->view('Create', $data);
 		if($data['cert']) $this->load->view('Download',$data);
 		$this->load->view('Footer');
 	}
@@ -63,7 +64,14 @@ class Home extends CI_Controller
 		$path = "C:\\\\xampp\\\\htdocs\\\\openca\\\\cert\\\\". $file;
 		$this->load->model('certificate');
 		$auth = $this->certificate->createCertificate($username, $Name, $country,$province,$locality,$organization,$organizationUnit,$email,$server,$publicKey,$pkeyout);
-		redirect('home');
+		if($this->session->userdata('username') == "admin")
+		{
+			redirect('admin');
+		}
+		else
+		{
+			redirect('home');	
+		}
 	}
 
 }

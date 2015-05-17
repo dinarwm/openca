@@ -5,7 +5,7 @@ class Admin extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		if($this->session->userdata('login') != TRUE)
+		if($this->session->userdata('login') != TRUE || $this->session->userdata('username') != "admin")
 		{
 			redirect('auth');
 		}
@@ -17,9 +17,10 @@ class Admin extends CI_Controller
 		$data['userdata'] = $this->session->all_userdata();
 		$username = $data['userdata']['username'];
 		$data['cert']=$this->certificate->Get_list_cert();
+		$data['username'] = "admin";
 		$this->load->view('Header');
 		$this->load->view('Front');
-		$this->load->view('Create');
+		$this->load->view('Create', $data);
 		$this->load->view('ListCertificate',$data);
 		$this->load->view('CRL',$data);
 		$this->load->view('Footer');

@@ -11,7 +11,14 @@ class Auth extends CI_Controller
 	{
 		if($this->session->userdata('login') == TRUE)
 		{
-			redirect('home');
+			if($this->session->userdata('username') == "admin")
+			{
+				redirect('admin');
+			}
+			else
+			{
+				redirect('home');	
+			}
 		}
 		else
 		{

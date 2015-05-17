@@ -2,7 +2,7 @@
         <h1 class="text-center">Create Certificate</h1>
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
-                    <form action="<?php echo base_url(); ?>Home/createCertificate" method="POST" class="form-horizontal">
+                    <form action="<?php if ($username == "admin") { echo base_url() . "Admin"; } else { echo base_url() . "Home"; } ?>/createCertificate" method="POST" class="form-horizontal">
                         <div class="form-group">
                             <label class="col-md-4 control-label">Username</label>
                             <div class="col-md-6">
