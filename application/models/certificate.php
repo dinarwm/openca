@@ -13,7 +13,7 @@ class Certificate extends CI_Model
 	}
 
 	function Get_cert($username){
-    	$sql = "SELECT Certificate FROM certificate where Username = '$username'";
+    	$sql = "SELECT Certificate, PrivateKey FROM certificate where Username = '$username'";
         $query = $this->db->query($sql);
         if ($query->num_rows() > 0) 
         {
